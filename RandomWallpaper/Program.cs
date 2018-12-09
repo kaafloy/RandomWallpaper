@@ -14,14 +14,7 @@ namespace RandomWallpaper
 
 		[DllImport("user32.dll", CharSet = CharSet.Auto)]
 		static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
-
-		public enum Style : int
-		{
-			Tiled,
-			Centered,
-			Stretched
-		}
-
+        
 		static void Main(string[] args)
 		{
 			var picturesFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
